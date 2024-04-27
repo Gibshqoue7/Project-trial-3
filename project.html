@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Management System</title>
+    <link rel="stylesheet" type="text/css" href="project.css"> <!-- Include a CSS file for styling -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"> Project Management System </a>
+            </li>
+            
+            <li>
+                <a href="./user.html"> User Registration and Login </a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>Project Management System</h1>
+    
+    <!-- Add a new project -->
+    <h2>Add a New Project</h2>
+    <form method="POST" action="add_project.php">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        
+        <label for="phase">Phase:</label>
+        <input type="text" id="phase" name="phase" required>
+        
+        <button type="submit">Add Project</button>
+    </form>
+
+    <!-- List existing projects with buttons to view details -->
+    <h2>Existing Projects</h2>
+    <ul>
+            
+            <li>
+             <!--"<span>$title</span>";-->
+             <a href='view_project.php?id=$pid'><button>View Details</button></a>
+            </li>
+    </ul>
+
+    <!-- Update an existing project -->
+    <h2>Update Project</h2>
+    <form method="POST" action="update_project.php">
+        <label for="project_id">Project ID to update:</label>
+        <input type="text" id="project_id" name="pid" required>
+
+        <label for="title">New Title:</label>
+        <input type="text" id="title" name="title">
+        
+        <label for="description">New Description:</label>
+        <textarea id="description" name="description"></textarea>
+        
+        <label for="start_date">New Start Date:</label>
+        <input type="date" id="start_date" name="start_date">
+        
+        <label for="end_date">New End Date:</label>
+        <input type="date" id="end_date" name="end_date">
+        
+        <label for="phase">New Phase:</label>
+        <input type="text" id="phase" name="phase">
+        
+        <button type="submit">Update Project</button>
+    </form>
+
+    <!-- Search for projects by title or start date -->
+    <h2>Search Projects</h2>
+    <form method="GET" action="search_projects.php">
+        <label for="search">Search by title or start date:</label>
+        <input type="text" id="search" name="search">
+        <button type="submit">Search</button>
+    </form>
+
+   
+</body>
+</html>

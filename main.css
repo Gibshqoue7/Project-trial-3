@@ -1,0 +1,67 @@
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Styling for form containers */
+.form-container {
+    max-width: 500px; /* Set maximum width */
+    margin: 50px auto; /* Center the form on the page */
+    padding: 20px; /* Padding inside the form container */
+    border: 1px solid #ddd; /* Light border */
+    background-color: white; /* White background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Headings within form containers */
+.form-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Margin below the heading */
+    color: #333; /* Dark gray color for text */
+}
+
+/* Form groups for aligning labels and inputs */
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Labels for form fields */
+.form-group label {
+    display: block; /* Ensure the label is above the input */
+    font-weight: bold; /* Make the label text bold */
+    color: #333; /* Dark gray color */
+}
+
+/* Input fields within form containers */
+.form-group input {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styling for buttons */
+.form-container button {
+    display: inline-block; /* Ensure buttons do not expand to full width */
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect for buttons */
+.form-container button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive design: adjust styles for smaller screens */
+@media (max-width: 600px) {
+    .form-container {
+        margin: 20px auto; /* Reduce margin for smaller screens */
+    }
+}

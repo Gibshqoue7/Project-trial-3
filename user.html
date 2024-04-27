@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER REGISTRATION, LOGIN AND LOGOUT</title>
+    <link rel="stylesheet" href="main.css"> <!-- Link to CSS styles -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"> User Registration and Login </a>
+            </li>
+            
+            <li>
+                <a href="./project.html"> Project Management System </a>
+            </li>
+        </ul>
+    </nav>
+
+
+<!-- User Registration Form -->
+
+<div class="form-container">
+    <h2>Register</h2>
+    <form method="post" action="register.php" onsubmit="return validateRegistrationForm()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<!-- User Login Form -->
+<div class="form-container">
+    <h2>Login</h2>
+    <form method="post" action="login.php" onsubmit="return validateLoginForm()">
+        <div class="form-group">
+            <label for="login_username">Username:</label>
+            <input type="text" id="login_username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="login_password">Password:</label>
+            <input type="password" id="login_password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<!-- User Logout Functionality -->
+<div class="form-container">
+    <h2>Logout</h2>
+    <!-- Link or button to trigger the logout function -->
+    <form method="post" action="logout.php">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+<script>
+function validateRegistrationForm() {
+    const password = document.getElementById("password").value;
+
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters.");
+        return false;
+    }
+
+    return true;
+}
+
+function validateLoginForm() {
+    const username = document.getElementById("login_username").value.trim();
+    const password = document.getElementById("login_password").value.trim();
+
+    if (!username || !password) {
+        alert("Both username and password are required.");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+</body>
+</html>
